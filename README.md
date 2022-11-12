@@ -1,7 +1,7 @@
 ## Description
 A simple app where users can add topics and vote for them in an battle for supremacy
 
-![21 Savage](public/popContest.jpg)
+![image](https://user-images.githubusercontent.com/112410929/201456668-a8658714-d747-4886-8332-d17781e66717.png)
 
 # Tech used 
 HTML, CSS, JavaScript
