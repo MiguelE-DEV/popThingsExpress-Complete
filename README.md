@@ -3,7 +3,7 @@ A simple app where users can add topics and vote for them in an battle for supre
 
 ![21 Savage](public/popContest.jpg)
 
-#Tech used 
+# Tech used 
 HTML, CSS, JavaScript
 
 ## Installation
