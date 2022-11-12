@@ -1,5 +1,9 @@
 body{
   background: rgb(123, 123, 145);
+  background-image: url(crowdBG.jpg);
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: cover;
 }
 h3{
   margin-top: 40px;
