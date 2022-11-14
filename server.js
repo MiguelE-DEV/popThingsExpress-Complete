@@ -26,14 +26,14 @@ app.use(bodyParser.json())
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  db.collection('messages').find().toArray((err, result) => {
+  db.collection('popThings').find().toArray((err, result) => {
     if (err) return console.log(err)
     res.render('index.ejs', {messages: result})
   })
 })
 
 app.post('/messages', (req, res) => {
-  db.collection('messages').insertOne({name: req.body.name, thumbUp: 0, thumbDown:0}, (err, result) => {
+  db.collection('popThings').insertOne({name: req.body.name, thumbUp: 0, thumbDown:0}, (err, result) => {
     if (err) return console.log(err)
     console.log('saved to database')
     res.redirect('/')
@@ -41,7 +41,7 @@ app.post('/messages', (req, res) => {
 })
 //update
 app.put('/messages', (req, res) => {
-  db.collection('messages')
+  db.collection('popThings')
   .findOneAndUpdate({
     name: req.body.name
   },
@@ -57,7 +57,7 @@ app.put('/messages', (req, res) => {
   })
 })
 app.put('/messages-1', (req, res) => {
-  db.collection('messages')
+  db.collection('popThings')
   .findOneAndUpdate({
     name: req.body.name
   }, {
@@ -74,7 +74,7 @@ app.put('/messages-1', (req, res) => {
 })
 
 app.delete('/messages', (req, res) => {
-  db.collection('messages').findOneAndDelete({name: req.body.name}, (err, result) => {
+  db.collection('popThings').findOneAndDelete({name: req.body.name}, (err, result) => {
     if (err) return res.send(500, err)
     res.send('Message deleted!')
   })
